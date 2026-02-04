@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   app:
-    build: .
+    build: ./app
     command: ["-listen=:8080", "-text={\"status\":\"ok\",\"service\":\"app\",\"env\":\"${ENV_NAME:-local}\"}"]
     healthcheck:
       test: ["CMD", "wget", "-qO-", "http://localhost:8080"]
