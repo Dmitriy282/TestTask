@@ -26,7 +26,7 @@ Follow these steps to start the application locally:
 Copy the example environment file and adjust the variables if needed.
 ```bash
 cp .env.example .env
-# Open .env and adjust ENV_NAME if desired (default: local)
+// Open .env and adjust ENV_NAME if desired (default: local)
 
 ### Step 2: Start the Application
 Use the Makefile shortcuts to manage the lifecycle of the app:
@@ -34,5 +34,6 @@ Use the Makefile shortcuts to manage the lifecycle of the app:
 ```bash
 # Build and start services in the background
 make up
+
 
 
