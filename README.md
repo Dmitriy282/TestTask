@@ -36,8 +36,18 @@ Use the Makefile shortcuts to manage the lifecycle of the app:
 ```bash
 # Build and start services in the background
 make up
+```
+## 3. Expected Outputs
+Health Check
+Verify the service is running and accessible:
 
-
+```bash
+curl -s http://localhost:8080/healthz
+Expected JSON Output:
+```
+```JSON
+{"status":"ok","service":"app","env":"local"}
+```
 
 
 
