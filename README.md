@@ -38,13 +38,16 @@ Use the Makefile shortcuts to manage the lifecycle of the app:
 make up
 ```
 ```
-make logs - 
+# Follow container logs.
+make logs 
 ```
 ```
-make down - Stop and remove containers.
+# Stop and remove containers.
+make down 
 ```
 ```
-make test - Run a simple health check connectivity test.
+# Run a simple health check connectivity test.
+make test 
 ```
 ## 3. Expected Outputs
 Health Check
@@ -57,6 +60,7 @@ Expected JSON Output:
 ```JSON
 {"status":"ok","service":"app","env":"local"}
 ```
+
 
 
 
