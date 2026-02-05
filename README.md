@@ -37,6 +37,15 @@ Use the Makefile shortcuts to manage the lifecycle of the app:
 # Build and start services in the background
 make up
 ```
+```
+make logs - 
+```
+```
+make down - Stop and remove containers.
+```
+```
+make test - Run a simple health check connectivity test.
+```
 ## 3. Expected Outputs
 Health Check
 Verify the service is running and accessible:
@@ -48,6 +57,7 @@ Expected JSON Output:
 ```JSON
 {"status":"ok","service":"app","env":"local"}
 ```
+
 
 
 
