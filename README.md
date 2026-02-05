@@ -55,11 +55,12 @@ Verify the service is running and accessible:
 
 ```bash
 curl -s http://localhost:8080/healthz
-Expected JSON Output:
 ```
-```JSON
+```bash #Expected JSON Output:
+JSON
 {"status":"ok","service":"app","env":"local"}
 ```
+
 
 
 
