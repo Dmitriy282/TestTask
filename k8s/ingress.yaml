@@ -1,19 +1,40 @@
 apiVersion: networking.k8s.io/v1
- kind: Ingress
- metadata:
-   name: app
-   annotations:
-     nginx.ingress.kubernetes.io/proxy-body-size: "1m"
- spec:
-   ingressClassName: nginx
-   rules:
- 	- host: localhost
-   	http:
-     	paths:
-       	- path: /
-         	pathType: Prefix
-         	backend:
-           	service:
-             	name: app
-             	port:
-               	number: 8080
+kind: Ingress
+metadata:
+  name: mynginx
+  namespace: sandbox
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-production
+    nginx.org/redirect-to-https: "true"
+    nginx.ingress.kubernetes.io/proxy-body-size: "5000m"
+    # Безопасные аннотации вместо configuration-snippet
+    nginx.ingress.kubernetes.io/proxy-connect-timeout: "300"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "300"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "300"
+    nginx.ingress.kubernetes.io/proxy-buffer-size: "64k"
+    nginx.ingress.kubernetes.io/proxy-buffers: "8 64k"
+    # Для WordPress важно
+    nginx.ingress.kubernetes.io/proxy-set-header: |
+      Host $host
+      X-Real-IP $remote_addr
+      X-Forwarded-For $proxy_add_x_forwarded_for
+      X-Forwarded-Proto $scheme
+      X-Forwarded-Host $host
+      X-Forwarded-Port $server_port
+spec:
+  ingressClassName: first-nginx
+  tls:
+    - hosts:
+        - dmytro.robointerativo.org
+      secretName: dmytro.robointerativo.org
+  rules:
+    - host: dmytro.robointerativo.org
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: mytask
+                port:
+                  number: 80

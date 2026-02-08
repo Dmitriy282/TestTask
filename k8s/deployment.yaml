@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  namespace: sandbox
+  labels:
+    app: task
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: task
+  template:
+    metadata:
+      labels:
+        app: task
+    spec:
+      containers:
+        - name: task
+          image: registry.robointerativo.org/sandbox/testtask:main
+          ports:
+            - containerPort: 80
+          #command: ["/bin/echo"]
+          args: ["-listen=:80", '-text={"status":"ok","service":"app","env":"local"}']
+          livenessProbe:
+                httpGet:
+                  path: /  # или другой путь, который отвечает ваше приложение
+                  port: 80
+                initialDelaySeconds: 15  # ждать 15 секунд перед первой проверкой
+                periodSeconds: 10        # проверять каждые 10 секунд
+                timeoutSeconds: 5        # таймаут 5 секунд на ответ
+                failureThreshold: 3      # 3 неудачных проверки подряд = контейнер не жив
+                successThreshold: 1      # 1 успешная проверка = контейнер жив
+
+              # Readiness probe - проверяет готов ли контейнер принимать трафик
+          readinessProbe:
+            httpGet:
+              path: /  # или другой путь для проверки готовности
+              port: 80
+            initialDelaySeconds: 5   # ждать 5 секунд перед первой проверкой
+            periodSeconds: 5         # проверять каждые 5 секунд
+            timeoutSeconds: 3        # таймаут 3 секунды на ответ
+            failureThreshold: 3      # 3 неудачных проверки = контейнер не готов
+            successThreshold: 1      # 1 успешная проверка = контейнер готов
+      imagePullSecrets:
+      - name: registry-credentials
