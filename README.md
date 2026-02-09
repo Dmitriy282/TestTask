@@ -68,6 +68,9 @@ When you run a pipeline in GitLab (manually or via commit), GitLab Runner create
 
 <img width="828" height="74" alt="image" src="https://github.com/user-attachments/assets/822c4946-01eb-4006-96f1-32656f4cb8c5" />
 
+<img width="727" height="552" alt="image" src="https://github.com/user-attachments/assets/77e5cd18-ab9f-48e2-bba4-682807038478" />
+
+<img width="760" height="423" alt="image" src="https://github.com/user-attachments/assets/679fd1fc-c2f4-405d-97e1-d8166823db73" />
 
 
 
