@@ -13,7 +13,7 @@ Before running the project, ensure you have the following installed:
 
 **For Kubernetes (Bonus):**
 * [Kind](https://kind.sigs.k8s.io/) (Kubernetes in Docker)
-* [kubectl](https://kubernetes.io/docs/tasks/tools/)
+* [kubectl](https://kubernetes.io/docs/tasks/tools/) v1.34.1
 * [Helm](https://helm.sh/)
 
 ---
@@ -71,6 +71,7 @@ When you run a pipeline in GitLab (manually or via commit), GitLab Runner create
 <img width="727" height="552" alt="image" src="https://github.com/user-attachments/assets/77e5cd18-ab9f-48e2-bba4-682807038478" />
 
 <img width="760" height="423" alt="image" src="https://github.com/user-attachments/assets/679fd1fc-c2f4-405d-97e1-d8166823db73" />
+
 
 
 
