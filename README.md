@@ -64,9 +64,10 @@ JSON
 
 ## 4. Bonus K8s
 
-
+When you run a pipeline in GitLab (manually or via commit), GitLab Runner creates a separate Pod in Kubernetes for each step (build, test, deploy). But it collects code from GitHub, right?
 
 <img width="828" height="74" alt="image" src="https://github.com/user-attachments/assets/822c4946-01eb-4006-96f1-32656f4cb8c5" />
+
 
 
 
