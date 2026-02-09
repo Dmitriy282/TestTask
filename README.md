@@ -12,9 +12,8 @@ Before running the project, ensure you have the following installed:
 * `make` (usually installed on Linux/macOS; for Windows use WSL or Git Bash)
 
 **For Kubernetes (Bonus):**
-* [Kind](https://kind.sigs.k8s.io/) (Kubernetes in Docker)
 * [kubectl](https://kubernetes.io/docs/tasks/tools/) v1.34.1
-* [Helm](https://helm.sh/)
+
 
 ---
 
@@ -76,6 +75,7 @@ Stage 2
 
 Stage 3
 <img width="760" height="423" alt="image" src="https://github.com/user-attachments/assets/679fd1fc-c2f4-405d-97e1-d8166823db73" />
+
 
 
 
