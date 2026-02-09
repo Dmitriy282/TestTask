@@ -7,8 +7,8 @@ This project demonstrates a Dockerized application served behind an Nginx proxy 
 Before running the project, ensure you have the following installed:
 
 **Required:**
-* [Docker](https://docs.docker.com/get-docker/)
-* [Docker Compose](https://docs.docker.com/compose/install/) (or `docker compose` plugin)
+* [Docker](https://docs.docker.com/get-docker/) v29.2.0
+* [Docker Compose](https://docs.docker.com/compose/install/) (or `docker compose` plugin) v5.0.2
 * `make` (usually installed on Linux/macOS; for Windows use WSL or Git Bash)
 
 **For Kubernetes (Bonus):**
@@ -71,6 +71,7 @@ When you run a pipeline in GitLab (manually or via commit), GitLab Runner create
 <img width="727" height="552" alt="image" src="https://github.com/user-attachments/assets/77e5cd18-ab9f-48e2-bba4-682807038478" />
 
 <img width="760" height="423" alt="image" src="https://github.com/user-attachments/assets/679fd1fc-c2f4-405d-97e1-d8166823db73" />
+
 
 
 
