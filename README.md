@@ -1,5 +1,5 @@
 # High-Load Application with Nginx Rate Limiting
-1
+
 This project demonstrates a Dockerized application served behind an Nginx proxy with Rate Limiting enabled. It includes a setup for local development using Docker Compose and a bonus configuration for Kubernetes (Kind).
 
 ## 1. Prerequisites
@@ -74,6 +74,7 @@ Stage 2
 <img width="743" height="550" alt="image" src="https://github.com/user-attachments/assets/cbdfc9a7-f187-4642-a107-3fb086b4ae28" />
 Stage 3
 <img width="760" height="423" alt="image" src="https://github.com/user-attachments/assets/679fd1fc-c2f4-405d-97e1-d8166823db73" />
+
 
 
 
