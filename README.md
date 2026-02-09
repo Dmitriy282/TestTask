@@ -62,6 +62,10 @@ JSON
 {"status":"ok","service":"app","env":"local"}
 ```
 
+## 4. Bonus K8s
+
+
+
 
 
 
